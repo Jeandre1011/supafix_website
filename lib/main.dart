@@ -221,6 +221,16 @@ class _HomePageState extends State<HomePage> {
                             title: 'Installation and Repair of DStv, OVHD',
                             description: 'Professional installation and repair services for DStv and OVHD satellite systems. Fast, reliable, and affordable.',
                           ),
+                          _ServiceCard(
+                            icon: Icons.kitchen,
+                            title: 'Fridge Repair',
+                            description: 'Expert repair services for fridges and freezers. Fast diagnosis and reliable solutions for all brands.',
+                          ),
+                          _ServiceCard(
+                            icon: Icons.microwave,
+                            title: 'Microwave Repair',
+                            description: 'Professional repair of microwave ovens. We fix heating, power, and control issues for all models.',
+                          ),
                         ],
                       ),
                     ],
