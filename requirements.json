@@ -1,0 +1,290 @@
+{
+    "project": "Supa Fix TV Website - Flutter Web",
+    "platform": "Flutter Web",
+    "description": "Build a fully responsive, modern, professional website for Supa Fix TV's using Flutter Web. This is a marketing website and not connected to any backend or app system. The page should match the UI mockup and be responsive across mobile, tablet, and desktop.",
+    "theme": {
+      "primaryColor": "#00FF00",
+      "accentColor": "#4FC3F7",
+      "backgroundColor": "#FFFFFF",
+      "headerBackground": "#2B2B2B",
+      "textColor": "#000000",
+      "fontFamily": "Roboto",
+      "fontSource": "Google Fonts"
+    },
+    "structure": {
+      "mainWidget": "MaterialApp with custom theme",
+      "screens": [
+        {
+          "name": "HomePage",
+          "widgets": [
+            {
+              "type": "AppBar",
+              "properties": {
+                "backgroundColor": "#2B2B2B",
+                "title": {
+                  "text": "Supa Fix TV's",
+                  "style": {
+                    "fontWeight": "bold",
+                    "color": "#00FF00",
+                    "fontSize": 24
+                  }
+                },
+                "actions": [
+                  { "text": "Home", "target": "#home" },
+                  { "text": "Services", "target": "#services" },
+                  { "text": "Contact", "target": "#contact" }
+                ]
+              }
+            },
+            {
+              "type": "SingleChildScrollView",
+              "children": [
+                {
+                  "id": "hero",
+                  "type": "Container",
+                  "padding": "EdgeInsets.all(32)",
+                  "decoration": {
+                    "color": "#FFFFFF"
+                  },
+                  "child": {
+                    "type": "ResponsiveRow",
+                    "children": [
+                      {
+                        "type": "Expanded",
+                        "flex": 1,
+                        "child": {
+                          "type": "Column",
+                          "crossAxisAlignment": "start",
+                          "children": [
+                            {
+                              "type": "Text",
+                              "text": "Reliable Repairs for TVs and Electronics",
+                              "style": {
+                                "fontSize": 32,
+                                "fontWeight": "bold",
+                                "color": "#000000"
+                              }
+                            },
+                            {
+                              "type": "SizedBox",
+                              "height": 12
+                            },
+                            {
+                              "type": "Text",
+                              "text": "Professional repair services for TV, DVD, HiFi, and screen issues.",
+                              "style": {
+                                "fontSize": 18,
+                                "color": "#333333"
+                              }
+                            },
+                            {
+                              "type": "SizedBox",
+                              "height": 24
+                            },
+                            {
+                              "type": "ElevatedButton",
+                              "text": "Request a Quote",
+                              "style": {
+                                "backgroundColor": "#00FF00",
+                                "foregroundColor": "#000000"
+                              },
+                              "onPressed": "ScrollToContactSection"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Expanded",
+                        "flex": 1,
+                        "child": {
+                          "type": "Image.asset",
+                          "path": "assets/technician_fixing_tv.png",
+                          "fit": "BoxFit.cover"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "services",
+                  "type": "Container",
+                  "padding": "EdgeInsets.symmetric(vertical: 48, horizontal: 24)",
+                  "child": {
+                    "type": "Column",
+                    "children": [
+                      {
+                        "type": "Text",
+                        "text": "Our Services",
+                        "style": {
+                          "fontSize": 28,
+                          "fontWeight": "bold",
+                          "color": "#000000"
+                        }
+                      },
+                      {
+                        "type": "SizedBox",
+                        "height": 16
+                      },
+                      {
+                        "type": "GridView.count",
+                        "crossAxisCount": "Responsive(1-2-4)",
+                        "shrinkWrap": true,
+                        "mainAxisSpacing": 16,
+                        "crossAxisSpacing": 16,
+                        "children": [
+                          {
+                            "icon": "Icons.tv",
+                            "title": "TV Repair",
+                            "description": "Fixing all types of televisions, including LED, LCD and Plasma."
+                          },
+                          {
+                            "icon": "Icons.movie",
+                            "title": "DVD Player Repair",
+                            "description": "Repairing DVD players to restore playback functionality."
+                          },
+                          {
+                            "icon": "Icons.speaker",
+                            "title": "HiFi & Audio Repair",
+                            "description": "Servicing HiFi systems and audio equipment for optimal sound."
+                          },
+                          {
+                            "icon": "Icons.screen_search_desktop",
+                            "title": "Screen Replacement",
+                            "description": "Replacing damaged screens on TVs or other devices."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "contact",
+                  "type": "Container",
+                  "color": "#F5F5F5",
+                  "padding": "EdgeInsets.all(32)",
+                  "child": {
+                    "type": "ResponsiveRow",
+                    "children": [
+                      {
+                        "type": "Expanded",
+                        "flex": 1,
+                        "child": {
+                          "type": "Column",
+                          "crossAxisAlignment": "start",
+                          "children": [
+                            {
+                              "type": "Text",
+                              "text": "Bethlehem",
+                              "style": {
+                                "fontSize": 20,
+                                "fontWeight": "bold"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "text": "(012) 345-6789"
+                            },
+                            {
+                              "type": "Text",
+                              "text": "support@supafixtvs.co.za"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Expanded",
+                        "flex": 1,
+                        "child": {
+                          "type": "Column",
+                          "children": [
+                            {
+                              "type": "Text",
+                              "text": "Contact Us",
+                              "style": {
+                                "fontSize": 24,
+                                "fontWeight": "bold"
+                              }
+                            },
+                            {
+                              "type": "Text",
+                              "text": "Have any questions? Get in touch with us!"
+                            },
+                            {
+                              "type": "ElevatedButton",
+                              "text": "Contact Now",
+                              "style": {
+                                "backgroundColor": "#00FF00",
+                                "foregroundColor": "#000000"
+                              },
+                              "onPressed": "launchEmailOrWhatsApp"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "footer",
+                  "type": "Container",
+                  "padding": "EdgeInsets.all(16)",
+                  "color": "#2B2B2B",
+                  "child": {
+                    "type": "Row",
+                    "mainAxisAlignment": "spaceBetween",
+                    "children": [
+                      {
+                        "type": "Text",
+                        "text": "© 2024 Supa Fix TV’s. All rights reserved.",
+                        "style": {
+                          "color": "#FFFFFF",
+                          "fontSize": 14
+                        }
+                      },
+                      {
+                        "type": "Row",
+                        "children": [
+                          {
+                            "type": "TextButton",
+                            "text": "Privacy Policy",
+                            "onPressed": "navigateToPrivacy"
+                          },
+                          {
+                            "type": "TextButton",
+                            "text": "Terms of Service",
+                            "onPressed": "navigateToTerms"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "features": {
+      "scrollToSections": true,
+      "responsiveLayout": true,
+      "hoverEffects": true,
+      "iconSupport": "Flutter Icons or FontAwesome",
+      "darkModeToggle": false
+    },
+    "assets": {
+      "images": [
+        {
+          "name": "technician_fixing_tv.png",
+          "usage": "Hero image"
+        }
+      ],
+      "fonts": [
+        {
+          "name": "Roboto",
+          "source": "Google Fonts"
+        }
+      ]
+    }
+  }
+  
